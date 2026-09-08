@@ -1,0 +1,11 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "include": ["Automation Quest/src", "Automation Quest/tests", "Automation Quest/tools"],
+  "executionEnvironments": [
+    {
+      "root": "Automation Quest",
+      "extraPaths": ["Automation Quest"]
+    }
+  ]
+}

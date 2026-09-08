@@ -1,0 +1,5 @@
+id,category,description,expected_use,sensitivity
+TD-001,account,valid disposable standard user,happy-path login and core journey,synthetic
+TD-002,account,locked or invalid user,negative authentication,synthetic
+TD-003,input,boundary-length text and special characters,input validation,synthetic
+TD-004,network,offline or slow network profile,error recovery,no personal data

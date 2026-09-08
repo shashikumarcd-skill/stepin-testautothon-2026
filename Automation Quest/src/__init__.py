@@ -1,0 +1,1 @@
+"""Automation Quest application package."""

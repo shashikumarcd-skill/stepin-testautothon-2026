@@ -1,0 +1,244 @@
+{
+  "source_name": "README.md",
+  "source_sha256": "38933bf8f9a3c17a134bbc0cc449c9b4c786d1b233db627788307a6204b0ad37",
+  "requirements": [
+    {
+      "identifier": "REQ-001",
+      "title": "Automation Quest",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 1"
+    },
+    {
+      "identifier": "REQ-002",
+      "title": "Framework Workflow",
+      "details": "",
+      "priority": "P2",
+      "source_reference": "Source line 5"
+    },
+    {
+      "identifier": "REQ-003",
+      "title": "> Prioritize business-risk workflows",
+      "details": "",
+      "priority": "P2",
+      "source_reference": "Source line 9"
+    },
+    {
+      "identifier": "REQ-004",
+      "title": "> Automate stable web and Android journeys",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 10"
+    },
+    {
+      "identifier": "REQ-005",
+      "title": "> Capture evidence and classify failures",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 11"
+    },
+    {
+      "identifier": "REQ-006",
+      "title": "> Validate safe locator fallback where needed",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 12"
+    },
+    {
+      "identifier": "REQ-007",
+      "title": "> Summarize execution and recommend next coverage",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 13"
+    },
+    {
+      "identifier": "REQ-008",
+      "title": "> Hand supported potential product defects to Bug Quest",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 14"
+    },
+    {
+      "identifier": "REQ-009",
+      "title": "What is included",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 26"
+    },
+    {
+      "identifier": "REQ-010",
+      "title": "Web UI tests using pytest and Playwright",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 28"
+    },
+    {
+      "identifier": "REQ-011",
+      "title": "Android native/mobile-web test seam using pytest and Appium",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 29"
+    },
+    {
+      "identifier": "REQ-012",
+      "title": "Page objects, configuration, test data, and reusable assertions",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 30"
+    },
+    {
+      "identifier": "REQ-013",
+      "title": "HTML/JUnit reports plus screenshots, traces, and video for failed web tests",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 31"
+    },
+    {
+      "identifier": "REQ-014",
+      "title": "A locator fallback utility for simple self-healing, with every fallback logged",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 32"
+    },
+    {
+      "identifier": "REQ-015",
+      "title": "Output And Bug Quest Handoff",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 34"
+    },
+    {
+      "identifier": "REQ-016",
+      "title": "Automation agents and AI use",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 47"
+    },
+    {
+      "identifier": "REQ-017",
+      "title": "`Web Automation Specialist`: Playwright page objects, web tests, accessibility, and browser evidence.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 51"
+    },
+    {
+      "identifier": "REQ-018",
+      "title": "`Android Automation Specialist`: Appium, device setup, native/mobile-web tests, and device evidence.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 52"
+    },
+    {
+      "identifier": "REQ-019",
+      "title": "Setup",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 56"
+    },
+    {
+      "identifier": "REQ-020",
+      "title": "From the workspace root; this environment is shared by both quests.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 61"
+    },
+    {
+      "identifier": "REQ-021",
+      "title": "Execute",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 74"
+    },
+    {
+      "identifier": "REQ-022",
+      "title": "Competition-Start Intake And Presentation",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 84"
+    },
+    {
+      "identifier": "REQ-023",
+      "title": "Safely intake the supplied intent without calling the application.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 89"
+    },
+    {
+      "identifier": "REQ-024",
+      "title": "Execute the verified P0 web scope and regenerate the presentation afterward.",
+      "details": "",
+      "priority": "P0",
+      "source_reference": "Source line 92"
+    },
+    {
+      "identifier": "REQ-025",
+      "title": "Challenge-start checklist",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 100"
+    },
+    {
+      "identifier": "REQ-026",
+      "title": "1. Review the supplied application details, credentials, test data, and other challenge artefacts.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 102"
+    },
+    {
+      "identifier": "REQ-027",
+      "title": "2. Put the supplied APK in `apps/` and update `.env`.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 103"
+    },
+    {
+      "identifier": "REQ-028",
+      "title": "3. Replace `HomePage` locators with application-under-test locators.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 104"
+    },
+    {
+      "identifier": "REQ-029",
+      "title": "4. Add focused page objects and user-journey tests.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 105"
+    },
+    {
+      "identifier": "REQ-030",
+      "title": "5. Keep test data free of credentials and personal data.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 106"
+    },
+    {
+      "identifier": "REQ-031",
+      "title": "6. Record locator fallback events and validate every AI-assisted change.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 107"
+    },
+    {
+      "identifier": "REQ-032",
+      "title": "7. Review `output/` for secrets or personal data before sharing evidence.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 108"
+    },
+    {
+      "identifier": "REQ-033",
+      "title": "8. Hand off only reproducible, evidence-supported potential product defects to Bug Quest.",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 109"
+    },
+    {
+      "identifier": "REQ-034",
+      "title": "Submission",
+      "details": "",
+      "priority": "P1",
+      "source_reference": "Source line 111"
+    }
+  ]
+}
