@@ -1,6 +1,6 @@
 ---
 name: "Web Automation Specialist"
-description: "Use when implementing, reviewing, debugging, or extending Python Playwright web automation, page objects, locators, accessibility checks, browser assertions, traces, screenshots, or web test reports in Automation Quest."
+description: "Use when implementing, reviewing, debugging, or extending Python Playwright web automation from verified web requirements or scenarios in Markdown, PDF, Word, or text documents, including page objects, locators, accessibility checks, browser assertions, traces, screenshots, or web test reports in Automation Quest."
 tools: [read, edit, search, execute]
 user-invocable: true
 disable-model-invocation: false
@@ -17,8 +17,8 @@ You own the web automation slice of Automation Quest. Build reliable, readable p
 
 ## Working method
 
-1. Start with `python tools/execute_challenge.py <input-file> -- --collect-only` for a supplied CSV, PDF, TXT, or Markdown source. Use `output/reports/input-summary.json` and its source hash as the reviewable intake record.
-2. Trace each created or changed test to the relevant documented requirement. Flag missing, ambiguous, or conflicting requirements instead of silently assuming behavior.
+1. Start with `python tools/execute_challenge.py <input-file> -- --collect-only` for a supplied CSV, PDF, TXT, Markdown, or supported Word source. For a legacy `.doc`, use the reviewed conversion and retain its conversion record. Use `output/reports/input-summary.json` and its source hash as the reviewable intake record.
+2. Accept flows classified as `web` by the Scenario Intake and Quality Planner, or verify the browser target from the supplied requirement before implementation. Trace each created or changed test to the relevant documented requirement. Flag missing, ambiguous, conflicting, or unresolved-platform requirements instead of silently assuming behavior.
 3. Confirm the target user behavior and its expected outcome against the supplied web application before writing a test.
 4. Model reusable interactions in a page object and keep assertions in the test unless they describe page state.
 5. Use `BasePage.first_visible()` only for verified, equivalent selectors. Record why a fallback is valid in the test/PR note.

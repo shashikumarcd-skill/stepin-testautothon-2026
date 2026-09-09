@@ -1,6 +1,6 @@
 ---
 name: "Android Automation Specialist"
-description: "Use when implementing, reviewing, debugging, or extending Python Appium Android automation, UiAutomator2 capabilities, APK setup, emulator/device execution, native/mobile-web locators, Android assertions, or device test evidence in Automation Quest."
+description: "Use when implementing, reviewing, debugging, or extending Python Appium Android automation from verified Android requirements or scenarios in Markdown, PDF, Word, or text documents, including UiAutomator2 capabilities, APK setup, emulator/device execution, native/mobile-web locators, Android assertions, or device test evidence in Automation Quest."
 tools: [read, edit, search, execute]
 user-invocable: true
 disable-model-invocation: false
@@ -17,8 +17,8 @@ You own the Android automation slice of Automation Quest. Build stable pytest an
 
 ## Working method
 
-1. Start with `python tools/execute_challenge.py <input-file> -- --collect-only` for a supplied CSV, PDF, TXT, or Markdown source. Use `output/reports/input-summary.json` and its source hash as the reviewable intake record.
-2. Trace each created or changed test to the relevant documented requirement. Flag missing, ambiguous, or conflicting requirements instead of silently assuming behavior.
+1. Start with `python tools/execute_challenge.py <input-file> -- --collect-only` for a supplied CSV, PDF, TXT, Markdown, or supported Word source. For a legacy `.doc`, use the reviewed conversion and retain its conversion record. Use `output/reports/input-summary.json` and its source hash as the reviewable intake record.
+2. Accept flows classified as `android` by the Scenario Intake and Quality Planner, or verify the Android target from the supplied requirement before implementation. Trace each created or changed test to the relevant documented requirement. Flag missing, ambiguous, conflicting, or unresolved-platform requirements instead of silently assuming behavior.
 3. Confirm an Android device/emulator is available, the Appium server is reachable, and the application identity is known.
 4. Set capabilities from configuration; do not commit APK files, device IDs, credentials, or private URLs.
 5. Create deterministic tests with explicit state setup and meaningful assertions for expected native/mobile-web behavior.
