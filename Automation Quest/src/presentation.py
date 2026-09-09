@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import xml.etree.ElementTree as element_tree
+import json
 from pathlib import Path
 
 from pptx import Presentation
@@ -32,6 +33,7 @@ def create_presentation(
         [f"{item.priority} | {item.identifier} | {item.title}" for item in intake.requirements[:12]],
     )
     _add_bullets(presentation, "Execution", [f"Command: {command}", *_junit_summary(junit_path)])
+    _add_bullets(presentation, "Quality intelligence", _quality_intelligence(junit_path.parent))
     _add_bullets(
         presentation,
         "Evidence and next actions",
@@ -57,6 +59,19 @@ def _junit_summary(junit_path: Path) -> list[str]:
     errors = suite.attrib.get("errors", "0")
     skipped = suite.attrib.get("skipped", "0")
     return [f"Tests: {tests}", f"Failures: {failures}", f"Errors: {errors}", f"Skipped: {skipped}"]
+
+
+def _quality_intelligence(reports_path: Path) -> list[str]:
+    path = reports_path / "quality-dashboard.json"
+    if not path.is_file():
+        return ["Quality dashboard is not available for this execution."]
+    dashboard = json.loads(path.read_text(encoding="utf-8"))
+    recommendations = dashboard.get("recommendations", [])[:3]
+    return [
+        f"Risk score: {dashboard.get('risk_score', 0)}/100",
+        f"Safe locator-healing events: {dashboard.get('healing', {}).get('safe_events', 0)}",
+        *[f"{item['priority']} | {item['action']}" for item in recommendations],
+    ]
 
 
 def _add_title_slide(presentation: Presentation, title: str, subtitle: str) -> None:

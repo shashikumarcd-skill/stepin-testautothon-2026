@@ -29,6 +29,12 @@ TestAutothon encourages AI when it improves the solution responsibly. AI support
 5. Retain execution evidence for claims made in reports: test command, build/environment, screenshots, traces, video, logs, and JUnit/HTML output as appropriate. Store generated execution material under `output/` and transfer only redacted, relevant items to Bug Quest evidence.
 6. Be ready to explain the tool/model, task, prompt sequence, output adopted, review method, defects or hallucinations found, and measured benefit to the judges.
 
+## Deterministic quality intelligence
+
+This framework includes local, rule-based failure classification and risk-based next-test recommendations. It does not call an external AI provider, transmit run data, or make autonomous release or defect decisions. The classifications, recommendation rationale, quality-gate observations, and locator-healing confidence are saved under `output/reports/` for review.
+
+Treat these results as explainable prioritization support. A `product_defect` label is a hypothesis based on test evidence and requires reproduction; an accessibility or security warning is an observation, not a certification or penetration-test conclusion.
+
 ## Disclosure log
 
 Complete one row for each meaningful AI-assisted activity. Store only sanitized prompt excerpts and references.

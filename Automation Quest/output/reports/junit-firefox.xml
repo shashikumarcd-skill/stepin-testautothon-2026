@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="6.926" timestamp="2026-09-09T13:21:16.323642+05:30" hostname="dinm5CG5342VCZ"><testcase classname="tests.web.test_home_page" name="test_home_page_loads[firefox]" time="6.894" /></testsuite></testsuites>

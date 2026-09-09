@@ -2,6 +2,8 @@
 
 Structured documentation and evidence workflow for the TestAutothon Bug Quest. It turns the challenge brief, exploratory observations, and Automation Quest results into credible test strategy, reproducible defect reports, and a clean submission package.
 
+This framework is aligned to the participant challenge guidance: use AI to improve the test strategy, use AI to improve bug-report quality, and publish outputs using the required naming convention.
+
 ## Parallel Framework Workflow
 
 ```text
@@ -70,6 +72,32 @@ python tools/validate_bug_reports.py
 ```
 
 8. Export the strategy and reports to Word, PDF, or Excel as requested by organizers. Place approved strategy exports in `output/strategy/`, approved reports in `output/bug-reports/`, requested redacted evidence copies in `output/evidence/`, and complete `output/submission-manifest.md`.
+
+## AI-first Strategy And Report Workflow
+
+1. Use AI to draft and improve `docs/test-strategy.md` from product context, risk model, and known dependencies.
+2. Validate AI output against actual product behavior and challenge constraints.
+3. Use AI to improve reproducibility language, business-impact framing, and remediation suggestions in bug reports.
+4. Keep the final decision human-reviewed and evidence-backed for every claim.
+5. Record meaningful prompts, models, validations, and limitations in `docs/ai-disclosure.md`.
+
+## Naming Convention Packaging
+
+Create the final named deliverables required by the challenge:
+
+- `TeamName_TestAutothon26_TestStrategy`
+- `TeamName_TestAutothon26_BugReport`
+
+Use this utility after your final exports are approved:
+
+```powershell
+python tools/package_deliverables.py --team-name Aura --strategy-source docs/test-strategy.md --bug-report-source reports/bugs/BUG-001.md
+```
+
+The utility copies files to:
+
+- `output/strategy/TeamName_TestAutothon26_TestStrategy.<ext>`
+- `output/bug-reports/TeamName_TestAutothon26_BugReport.<ext>`
 
 ## Output Package
 

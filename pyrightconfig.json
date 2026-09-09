@@ -5,7 +5,7 @@
   "executionEnvironments": [
     {
       "root": "Automation Quest",
-      "extraPaths": ["Automation Quest"]
+      "extraPaths": ["."]
     }
   ]
 }

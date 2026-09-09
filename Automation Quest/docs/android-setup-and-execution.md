@@ -85,9 +85,12 @@ For an APK launch, retain these values in `.env` and set the platform version on
 ```dotenv
 ANDROID_APP_PATH=apps/challenge.apk
 APPIUM_SERVER_URL=http://127.0.0.1:4723
-ANDROID_DEVICE_NAME=Android Emulator
+ANDROID_DEVICE_NAME=Pixel_9a
+ANDROID_UDID=emulator-5554
 ANDROID_PLATFORM_VERSION=
 ```
+
+The supplied environment has been verified with the `Pixel_9a` AVD at `emulator-5554`, Android 17, and package `com.gajab.buyerstore`. Keep `ANDROID_UDID` configured to avoid Appium selecting a different connected device. Do not commit a test mobile number or email address; set `GAJAB_MOBILE_NUMBER` and `GAJAB_EMAIL_RECIPIENT` only in the local `.env` supplied by the event.
 
 To test an already-installed application instead of an APK, leave `ANDROID_APP_PATH` pointing to a nonexistent path and set both package values:
 

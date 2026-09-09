@@ -43,19 +43,34 @@ Working evidence is stored in `../evidence/`. Final approved strategy exports, b
 | Security/privacy | | | | | |
 | Performance/responsiveness | | | | | |
 
+Web coverage target: Chrome, Firefox, and Edge.
+
+Android coverage target: same prioritized business scenarios as web, executed on the supplied APK path where technically feasible.
+
 ## 5. Test data
 
 Use unique, disposable test accounts and input values. Do not place real personal data or credentials in test records, screenshots, or AI prompts.
 
-## 6. Entry and exit criteria
+## 6. AI-assisted strategy and reporting
+
+- AI tools/models used:
+- Strategy prompts used:
+- Bug-report drafting prompts used:
+- Outputs accepted:
+- Outputs rejected and why:
+- Human validation steps:
+- Known AI limitations or hallucinations identified:
+- Time saved or quality improvements observed:
+
+## 7. Entry and exit criteria
 
 - Entry: build and test environment are available; critical accounts and data are prepared.
-- Exit: P0 tests executed; reproducible defects logged with evidence; risks and untested areas disclosed; final reports pass validation; reviewed exports and a submission manifest are present in `../output/`.
+- Exit: P0 tests executed; reproducible defects logged with evidence; risks and untested areas disclosed; final reports pass validation; reviewed exports are named `TeamName_TestAutothon26_TestStrategy` and `TeamName_TestAutothon26_BugReport`; a submission manifest is present in `../output/`.
 
-## 7. Defect triage
+## 8. Defect triage
 
 Rank severity by user/business impact and priority by urgency. Each defect needs deterministic steps, actual and expected results, environment/build, and redacted evidence. Record the failure classification and Automation Quest test reference when applicable; document why the evidence supports a product defect rather than an automation, locator, data, synchronization, or environment problem. Do not create a report when reproduction or product-defect qualification fails; capture the outcome in the investigation notes instead.
 
-## 8. Reporting And Traceability
+## 9. Reporting And Traceability
 
 Each reported defect must trace to the tested workflow, test data or account state, environment/build, evidence identifiers, and a validated reproduction. Link the detailed Markdown report, worksheet row, Automation Quest lead where applicable, and evidence items. Publish a defect summary, highest-impact defects, recommended regression tests, failure distribution, and business-impact summary in the approved strategy or defect-summary export. Package only reviewed final exports in `../output/`; retain raw or potentially sensitive working material in `../evidence/` with access controls appropriate to the challenge.

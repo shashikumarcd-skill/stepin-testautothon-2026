@@ -51,7 +51,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 Set-Location "Automation Quest"
 pip install -r requirements.txt
-playwright install chromium
+playwright install chromium firefox
 Copy-Item .env.example .env
 ```
 
@@ -76,14 +76,19 @@ Automation Quest owns stable, risk-prioritized test execution. Tests express the
 Run these commands from `Automation Quest/`:
 
 ```powershell
-# Critical Web smoke coverage
-pytest tests/web -m smoke
+# Participant-required browser coverage
+pytest tests/web -m smoke --browser chromium --browser-channel chrome
+pytest tests/web -m smoke --browser firefox
+pytest tests/web -m smoke --browser chromium --browser-channel msedge
 
-# Web execution with a visible browser
-pytest tests/web --headed
+# Android APK execution; start an Appium server and device/emulator first
+pytest tests/android -m smoke
 
-# Android execution; start an Appium server and device/emulator first
-pytest tests/android
+# Full participant-required matrix in one command
+python tools/run_required_matrix.py
+
+# Dry run readiness for language support (English + Hinglish)
+python tools/dry_run_language_matrix.py
 
 # All available automation tests
 pytest tests/
@@ -151,7 +156,7 @@ Before sharing any output, inspect it for secrets, credentials, personal data, a
 
 ## Submission
 
-- Automation Quest: rename the repository to `TeamName-TestAutothon26-AutomationFramework` and include reviewed execution output from `Automation Quest/output/reports/`.
+- Automation Quest: rename the repository to `TeamName-TestAutothon26-AutomationFramework` and include reviewed execution output for Chrome, Firefox, Edge, and Android from `Automation Quest/output/reports/`.
 - Bug Quest: place approved exports in `Bug Quest/output/`, complete the submission manifest, and name the requested deliverables `TeamName_TestAutothon26_TestStrategy` and `TeamName_TestAutothon26_BugReport`.
 
 For project-specific architecture, configuration, and challenge-start details, use the linked README for each solution above.

@@ -1,0 +1,26 @@
+[
+  {
+    "nodeid": "tests/web/test_home_page.py::test_home_page_loads[chromium]",
+    "category": "automation_defect",
+    "reason": "The failure indicates a test implementation error.",
+    "message": "page = <Page url='https://stg.gajab.com/'>\n\n    @pytest.mark.web\n    @pytest.mark.smoke\n    def test_home_page_loads(page):\n        home_page = GajabHomePage(page)\n        home_page.open(settings.web_base_url)\n    \n>       assert home_page.title()\n               ^^^^^^^^^^^^^^^\nE       AttributeError: 'GajabHomePage' object has no attribute 'title'\n\ntests\\web\\test_home_page.py:14: AttributeError"
+  },
+  {
+    "nodeid": "tests/web/test_gajab_entry_and_discovery.py::test_language_preference_can_be_selected[chromium-English]",
+    "category": "synchronization_failure",
+    "reason": "The failure indicates a timing or readiness problem.",
+    "message": "page = <Page url='https://stg.gajab.com/'>, language = 'English'\n\n    @pytest.mark.web\n    @pytest.mark.parametrize(\"language\", [\"English\", \"Hinglish\"])\n    def test_language_preference_can_be_selected(page, language):\n        home = GajabHomePage(page)\n        home.open(settings.web_base_url)\n        home.choose_language(language)\n    \n>       expect(page.get_by_text(language, exact=True)).not_to_be_visible()\nE       AssertionError: Locator expected not to be visible\nE       Actual value: visible \nE       Call log:\nE         - Expect \"not_to_be_visible\" with timeout 5000ms\nE         - waiting for get_by_text(\"English\", exact=True)\nE           14 \u00d7 locator resolved to <span id=\"language-switcher-desktop-current-lang\" class=\"text-[12px] leading-[16px] font-medium text-[#151C28] italic\">English</span>\nE              - unexpected value \"visible\"\nE       \nE       Aria snapshot:\nE       - text: English\n\ntests\\web\\test_gajab_entry_and_discovery.py:62: AssertionError"
+  },
+  {
+    "nodeid": "tests/web/test_gajab_entry_and_discovery.py::test_trending_products_expose_bargain_counts_for_leader_selection[chromium]",
+    "category": "product_defect",
+    "reason": "The application behavior did not satisfy the test assertion.",
+    "message": "page = <Page url='https://stg.gajab.com/'>\n\n    @pytest.mark.web\n    def test_trending_products_expose_bargain_counts_for_leader_selection(page):\n        home = GajabHomePage(page)\n        home.open(settings.web_base_url)\n        counts = home.trending_bargain_counts()\n    \n>       assert counts\nE       assert []\n\ntests\\web\\test_gajab_entry_and_discovery.py:71: AssertionError"
+  },
+  {
+    "nodeid": "tests/web/test_gajab_entry_and_discovery.py::test_language_preference_can_be_selected[chromium-Hinglish]",
+    "category": "synchronization_failure",
+    "reason": "The failure indicates a timing or readiness problem.",
+    "message": "page = <Page url='https://stg.gajab.com/'>, language = 'Hinglish'\n\n    @pytest.mark.web\n    @pytest.mark.parametrize(\"language\", [\"English\", \"Hinglish\"])\n    def test_language_preference_can_be_selected(page, language):\n        home = GajabHomePage(page)\n        home.open(settings.web_base_url)\n>       home.choose_language(language)\n\ntests\\web\\test_gajab_entry_and_discovery.py:60: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nsrc\\pages\\gajab_pages.py:51: in choose_language\n    self.page.get_by_text(language, exact=True).click()\n..\\.venv\\Lib\\site-packages\\playwright\\sync_api\\_generated.py:17876: in click\n    self._sync(\n..\\.venv\\Lib\\site-packages\\playwright\\_impl\\_locator.py:165: in click\n    return await self._frame._click(self._selector, strict=True, **params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n..\\.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py:593: in _click\n    await self._channel.send(\"click\", self._timeout, locals_to_params(locals()))\n..\\.venv\\Lib\\site-packages\\playwright\\_impl\\_connection.py:76: in send\n    return await self._connection.wrap_api_call(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <playwright._impl._connection.Connection object at 0x0000027ED5E6A510>\ncb = <function Channel.send.<locals>.<lambda> at 0x0000027ED745F690>\nis_internal = False, title = None\n\n    async def wrap_api_call(\n        self, cb: Callable[[], Any], is_internal: bool = False, title: str = None\n    ) -> Any:\n        if self._api_zone.get():\n            return await cb()\n        task = asyncio.current_task(self._loop)\n        parsed_st = _attach_api_call_information(\n            getattr(task, \"__pw_stack__\", None) or _capture_stack_trace(),\n            is_internal,\n            title,\n        )\n        self._api_zone.set(parsed_st)\n        try:\n            return await cb()\n        except Exception as error:\n>           raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nE           playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.\nE           Call log:\nE             - waiting for get_by_text(\"Hinglish\", exact=True)\n\n..\\.venv\\Lib\\site-packages\\playwright\\_impl\\_connection.py:632: TimeoutError"
+  }
+]

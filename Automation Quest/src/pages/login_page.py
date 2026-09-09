@@ -18,3 +18,6 @@ class LoginPage(BasePage):
         self.username_input.fill(username)
         self.password_input.fill(password)
         self.submit_button.click()
+
+    def logout(self) -> None:
+        self.page.get_by_role("link", name="Log out").click()

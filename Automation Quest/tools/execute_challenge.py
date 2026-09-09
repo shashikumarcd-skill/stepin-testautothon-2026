@@ -10,6 +10,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.intake import read_intake
+from src.bi_reporting import create_quality_dashboard
 from src.presentation import create_presentation
 
 
@@ -31,9 +32,10 @@ def main() -> int:
     (reports_path / "input-summary.json").write_text(
         json.dumps(intake.as_dict(), indent=2), encoding="utf-8"
     )
-    pytest_args = args.pytest_args or ["--collect-only"]
+    pytest_args = args.pytest_args or ["-m", "smoke"]
     pytest_command = [sys.executable, "-m", "pytest", *pytest_args]
     result = subprocess.run(pytest_command, cwd=PROJECT_ROOT, check=False)
+    create_quality_dashboard(reports_path)
     create_presentation(
         intake,
         reports_path / "quality-presentation.pptx",

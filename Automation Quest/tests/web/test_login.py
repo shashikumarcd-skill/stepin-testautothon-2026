@@ -18,6 +18,19 @@ def test_valid_user_can_log_in(page):
 
 
 @pytest.mark.web
+@pytest.mark.smoke
+def test_authenticated_user_can_log_out(page):
+    login_page = LoginPage(page)
+    login_page.open(settings.web_base_url)
+    login_page.login(settings.web_username, settings.web_password)
+    login_page.logout()
+
+    expect(page).to_have_url(settings.web_base_url)
+    expect(login_page.username_input).to_be_visible()
+    expect(login_page.password_input).to_be_visible()
+
+
+@pytest.mark.web
 def test_invalid_username_shows_specific_error(page):
     login_page = LoginPage(page)
     login_page.open(settings.web_base_url)

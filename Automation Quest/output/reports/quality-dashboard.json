@@ -1,0 +1,145 @@
+{
+  "execution": {
+    "runs": [
+      {
+        "target": "web-chrome",
+        "exit_code": 1,
+        "tests": 1,
+        "failures": 0,
+        "errors": 1,
+        "skipped": 0,
+        "passed": 0
+      },
+      {
+        "target": "web-firefox",
+        "exit_code": 0,
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 1
+      },
+      {
+        "target": "web-edge",
+        "exit_code": 1,
+        "tests": 1,
+        "failures": 0,
+        "errors": 1,
+        "skipped": 0,
+        "passed": 0
+      },
+      {
+        "target": "android",
+        "exit_code": 0,
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 1
+      }
+    ],
+    "totals": {
+      "tests": 4,
+      "passed": 2,
+      "failures": 0,
+      "errors": 2,
+      "skipped": 0
+    }
+  },
+  "risk_score": 0,
+  "failure_categories": {},
+  "quality_results": [
+    {
+      "area": "accessibility",
+      "status": "failed",
+      "details": {
+        "main_headings": 0,
+        "unnamed_interactive_controls": [
+          "<a href=\"https://practicetestautomation.com/\" class=\"custom-logo-link\" rel=\"home\"><img width=\"305\" height=\"96\" src=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?fit=305%2C96&amp;ssl=1\" class=\"custom-logo\" alt=\"Practice Test Automation\" decoding=\"async\" srcset=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?w=305&amp;ssl=1 305w, https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?resize=300%2C94&amp;ssl=1 300w\" sizes=\"(max-width: 305px) 100vw, 305px\"></a>",
+          "<button>\n\t\t\t\t\t\t\t\t\t<svg width=\"28px\" height=\"28px\" viewBox=\"0 0 28 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\t\t\t\t\t\t\t\t<g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(-174.000000, -18.000000)\" fill=\"#FFFFFF\">\n\t\t\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(174.000000, 18.000000)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(-45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t</svg>\t\t\t\t\t\t\t\t</button>"
+        ],
+        "keyboard_focus_available": true
+      }
+    },
+    {
+      "area": "performance",
+      "status": "passed",
+      "details": {
+        "domContentLoaded": 3290.6,
+        "load": 3607.5
+      }
+    },
+    {
+      "area": "security",
+      "status": "observed",
+      "details": {
+        "content_security_policy": false,
+        "x_content_type_options": false,
+        "strict_transport_security": false
+      }
+    },
+    {
+      "area": "accessibility",
+      "status": "failed",
+      "details": {
+        "semantic_headings": 4,
+        "unnamed_interactive_controls": [
+          "<a href=\"https://practicetestautomation.com/\" class=\"custom-logo-link\" rel=\"home\"><img width=\"305\" height=\"96\" src=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?fit=305%2C96&amp;ssl=1\" class=\"custom-logo\" alt=\"Practice Test Automation\" decoding=\"async\" srcset=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?w=305&amp;ssl=1 305w, https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?resize=300%2C94&amp;ssl=1 300w\" sizes=\"(max-width: 305px) 100vw, 305px\"></a>",
+          "<button>\n\t\t\t\t\t\t\t\t\t<svg width=\"28px\" height=\"28px\" viewBox=\"0 0 28 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\t\t\t\t\t\t\t\t<g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(-174.000000, -18.000000)\" fill=\"#FFFFFF\">\n\t\t\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(174.000000, 18.000000)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(-45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t</svg>\t\t\t\t\t\t\t\t</button>"
+        ],
+        "keyboard_focus_available": true
+      }
+    },
+    {
+      "area": "performance",
+      "status": "passed",
+      "details": {
+        "domContentLoaded": 1730.9,
+        "load": 2175.8
+      }
+    },
+    {
+      "area": "security",
+      "status": "observed",
+      "details": {
+        "content_security_policy": false,
+        "x_content_type_options": false,
+        "strict_transport_security": false
+      }
+    },
+    {
+      "area": "accessibility",
+      "status": "warning",
+      "details": {
+        "semantic_headings": 4,
+        "unnamed_interactive_controls": [
+          "<a href=\"https://practicetestautomation.com/\" class=\"custom-logo-link\" rel=\"home\"><img width=\"305\" height=\"96\" src=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?fit=305%2C96&amp;ssl=1\" class=\"custom-logo\" alt=\"Practice Test Automation\" decoding=\"async\" srcset=\"https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?w=305&amp;ssl=1 305w, https://i0.wp.com/practicetestautomation.com/wp-content/uploads/2019/10/Logo-1.png?resize=300%2C94&amp;ssl=1 300w\" sizes=\"(max-width: 305px) 100vw, 305px\"></a>",
+          "<button>\n\t\t\t\t\t\t\t\t\t<svg width=\"28px\" height=\"28px\" viewBox=\"0 0 28 28\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\t\t\t\t\t\t\t\t<g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(-174.000000, -18.000000)\" fill=\"#FFFFFF\">\n\t\t\t\t\t\t\t\t\t\t\t\t<g transform=\"translate(174.000000, 18.000000)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(-45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<rect transform=\"translate(14.000000, 14.000000) rotate(45.000000) translate(-14.000000, -14.000000) \" x=\"-4\" y=\"13\" width=\"36\" height=\"2\"></rect>\n\t\t\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t\t\t</g>\n\t\t\t\t\t\t</svg>\t\t\t\t\t\t\t\t</button>"
+        ],
+        "keyboard_focus_available": true
+      }
+    },
+    {
+      "area": "performance",
+      "status": "passed",
+      "details": {
+        "domContentLoaded": 1968.7,
+        "load": 2155.8
+      }
+    },
+    {
+      "area": "security",
+      "status": "observed",
+      "details": {
+        "content_security_policy": false,
+        "x_content_type_options": false,
+        "strict_transport_security": false
+      }
+    }
+  ],
+  "healing": {
+    "events": 0,
+    "safe_events": 0
+  },
+  "recommendations": []
+}
